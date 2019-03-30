@@ -7,7 +7,7 @@ namespace Pie.Models
 {
     public interface IPieRepository
     {
-        IEnumerable<Pie> GetAllPies();
-        Pie GetPieById(int id);
+        IEnumerable<PieCake> GetAllPies();
+        PieCake GetPieById(int id);
     }
 }

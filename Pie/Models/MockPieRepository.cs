@@ -7,7 +7,7 @@ namespace Pie.Models
 {
     public class MockPieRepository : IPieRepository
     {
-        private List<Pie> _pies;
+        private List<PieCake> _pies;
 
         public MockPieRepository()
         {
@@ -17,16 +17,16 @@ namespace Pie.Models
 
         private void InitliaziePies()
         {
-            _pies = new List<Pie>
+            _pies = new List<PieCake>
             {
-                new Pie {Id = 1, Name ="Apple pie", Price = 5, IsPieOfTheWeek = true, LongDescription = "lorem ipsum"}
+                new PieCake {Id = 1, Name ="Apple pie", Price = 5, IsPieOfTheWeek = true, LongDescription = "lorem ipsum"}
             };
         }
 
-        public Pie GetPieById(int id) => _pies.FirstOrDefault(x => x.Id == id);
+        public PieCake GetPieById(int id) => _pies.FirstOrDefault(x => x.Id == id);
 
 
-        public IEnumerable<Pie> GetAllPies() => _pies;
+        public IEnumerable<PieCake> GetAllPies() => _pies;
 
     }
 }

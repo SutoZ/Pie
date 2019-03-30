@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Pie.Models
 {
-    public class Pie
+    public class PieCake
     {
         public int Id { get; set; }
         public string Name { get; set; }

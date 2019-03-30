@@ -1,2 +1,8 @@
-﻿@model  IEnumerable<Pie.Models.Pie>
+﻿@model Pie.ViewModels.HomeViewModel
 
+<h2>@Model.Title</h2>
+
+@foreach (var pie in Model.Pies)
+{
+    <h1>@pie.Name</h1>
+}

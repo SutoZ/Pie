@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Pie.Models;
+using Pie.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,8 @@ namespace Pie.Controllers
                         .GetAllPies()
                         .OrderBy(x => x.Name);
 
-            return View(pies);
+            var homeViewModel = new HomeViewModel { Title = "Something title for Pie", Pies = pies.ToList() };
+            return View(homeViewModel);
         }
     }
 }
