@@ -12,11 +12,9 @@ namespace Pie.Controllers
     {
         private readonly IPieRepository _pieRepository;
 
-        public HomeController(IPieRepository pieRepository)
-        {
-            //constructor injection
-            _pieRepository = pieRepository;
-        }
+        //constructor injection
+        public HomeController(IPieRepository pieRepository) => _pieRepository = pieRepository;
+
         public IActionResult Index()
         {
             //return View(_pieRepository.);

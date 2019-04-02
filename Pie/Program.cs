@@ -18,8 +18,7 @@ namespace Pie
         }
 
         //Configures Kestrel web server, sets up the environment with IIS
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args) => 
+            WebHost.CreateDefaultBuilder(args).UseStartup<Startup>();
     }
 }
